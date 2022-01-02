@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}Головна сторінка{% endblock %}
+
+{% block content %}
+<form action="#", method="post">
+    <label for="email">Введіть ваш email:</label>
+
+    <input type="email" name="em" id="email"
+       placeholder="artem.tyshchenko@example.com"
+       pattern=".*@.*" size="50"
+       required>
+    <br>
+    <input type="submit" value="Привітатись" class="btn btn-primary">
+</form>
+<h1>{{reply}}</h1>
+<hr>
+<a href="https://hello-user-email.herokuapp.com/all_emails">Список користувачів, з якими вже привіталися</a>
+{% endblock %}
